@@ -11,12 +11,13 @@ import './styles.scss';
 function Toppings() {
 
     const { price, size, toppings, maxNumberOfToppings, toppingsArray, handlePrice, handleToppings, reset } = useOrder();
-    const [currentPrice, setCurrentPrice] = useState(price);
+    const [currentPrice, setCurrentPrice] = useState(price); //totalPrice will only be updated when user go to next page, in current page the user will see this variable as price
     const [currentNumberOfToppings, setCurrentNumberOfToppings] = useState(toppings.length);
     const [allowedFreeToppings] = useState(3);
 
     const [allowedMaxNumberOfToppings] = useState(maxNumberOfToppings);
 
+    //functions to handle user choices
     function handleChangeToppings(topping: Topping) {
         handleToppings(topping);
         handleToppingsPrice();
@@ -70,17 +71,16 @@ function Toppings() {
                         </button>
                     </Link>
 
-                    {
-                        <Link to={price === 0 ? "/" : "/Checkout"}
-                            onClick={currentNumberOfToppings <= allowedMaxNumberOfToppings
-                                ? () => handlePrice(currentPrice)
-                                : (event) => event.preventDefault()}>
+                    {/*quick trick to force user back to home page in case price was lost (page reload)*/}
+                    <Link to={price === 0 ? "/" : "/Checkout"} 
+                        onClick={currentNumberOfToppings <= allowedMaxNumberOfToppings
+                            ? () => handlePrice(currentPrice)
+                            : (event) => event.preventDefault()}>
 
-                            <button type="button" disabled={currentNumberOfToppings <= allowedMaxNumberOfToppings ? false : true}>
-                                <span>Next</span>
-                            </button>
-                        </Link>
-                    }
+                        <button type="button" disabled={currentNumberOfToppings <= allowedMaxNumberOfToppings ? false : true}>
+                            <span>Next</span>
+                        </button>
+                    </Link>
                 </div>
             </div>
 

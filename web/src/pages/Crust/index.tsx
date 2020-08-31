@@ -10,8 +10,9 @@ import './styles.scss';
 function PickCrust() {
 
     const { prices, price, crust, handlePrice, handleCrust, reset } = useOrder();
-    const [currentPrice, setCurrentPrice] = useState(price);
+    const [currentPrice, setCurrentPrice] = useState(price); //about price: totalPrice will only be updated when user go to next page, in current page the user will see this variable as price
 
+    //functions to handle user choices
     function handleChangeCrust(crust: Crust) {
         handleCrust(crust);
         if (currentPrice > price)

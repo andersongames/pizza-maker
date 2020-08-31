@@ -10,10 +10,11 @@ import './styles.scss';
 function Home() {
 
   const { size, price, prices, handleSize, handlePrice } = useOrder();
-  const [currentPrice, setCurrentPrice] = useState(price);
+  const [currentPrice, setCurrentPrice] = useState(price); //about price: totalPrice will only be updated when user go to next page, in current page the user will see this variable as price
 
-  handlePrice(0);
+  handlePrice(0); //reset the price when come back to home page
 
+  //functions to handle user choices
   function handleChangeSize(size: Size) {
     handleSize(size);
     if (currentPrice > price)
@@ -49,13 +50,11 @@ function Home() {
       <ShowPrice priceToShow={currentPrice} />
 
       <div className="nav-buttons"> {/*user only can go to the next page after selecting one option*/}
-        {
-          <Link to="/crust" onClick={!size ? (event) => event.preventDefault() : () => handlePrice(currentPrice)}>
-            <button type="button" disabled={!size ? true : false}>
-              <span>Next</span>
-            </button>
-          </Link>
-        }
+        <Link to="/crust" onClick={!size ? (event) => event.preventDefault() : () => handlePrice(currentPrice)}>
+          <button type="button" disabled={!size ? true : false}>
+            <span>Next</span>
+          </button>
+        </Link>
       </div>
     </div>
   );
