@@ -18,7 +18,7 @@ function PickCrust() {
             setCurrentPrice(price);
 
         setCurrentPrice(price + prices.crust[crust]);
-        console.log(crust, price);
+        //console.log(crust, price);
     }
 
     return (
