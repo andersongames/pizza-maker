@@ -11,10 +11,10 @@ This app allow the user to create his own pizza, the user can chose the size, cr
 ## :checkered_flag: Running
 Run the project on your local machine for development purposes.
 
-**Prerequisites:**
+**Prerequisites**
 - <a href="https://nodejs.org/en/" target="_blank">NodeJS</a>
 
-**Install dependencies and running:**
+**Install dependencies and run**
 - cd web
 - npm install
 - npm start
