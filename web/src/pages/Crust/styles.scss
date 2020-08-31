@@ -3,16 +3,12 @@
     width: 90vw;
     max-height: 360px;
     height: 90vh;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-
     background-color: var(--color-background);
-
     border-radius: 16px;
-
     padding: 2%;
 
     .crust-buttons {

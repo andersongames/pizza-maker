@@ -24,7 +24,7 @@ function Home() {
   }
 
   return (
-    <div id="home-content">
+    <div id="page-home">
       <Header />
 
       <h3>Pick the size:</h3>
