@@ -5,6 +5,9 @@
 ## :information_source: About
 This app allow the user to create his own pizza, the user can chose the size, crust and toppings.
 
+## :gear: Deploy
+- <a href="https://pizza-maker.vercel.app/" target="_blank">Vercel</a>
+
 ## :checkered_flag: Running
 Run the project on your local machine for development purposes.
 
