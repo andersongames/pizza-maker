@@ -1,0 +1,21 @@
+.pizza-info {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: var(--color-checkbox);
+border-radius: 12px;
+width: 60%;
+margin: 0 auto;
+
+    .info-wrapper {
+        display: flex;
+        padding: 8px;
+
+    }
+
+    .toppings-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+    }
+}

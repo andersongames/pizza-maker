@@ -1,0 +1,84 @@
+#page-toppings {
+    display: flex;
+    padding-top: 45%;
+    padding-bottom: 4%;
+
+    .toppings-content {
+        max-width: 660px;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        background-color: var(--color-background);
+        border-radius: 16px;
+        padding: 2%;
+
+        p {
+            padding: 8px 0 8px 0;
+        }
+
+        .texts {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .toppings-checkboxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            width: 100%;
+            max-width: 312px;
+            margin: 0 auto;
+
+            .topping-checkbox {
+                background-color: var(--color-checkbox);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid var(--color-text-base);
+                border-radius: 8px;
+                padding: 6px;
+
+                svg {
+                    width: 58px;
+                    height: 58px;
+                }
+
+                .checkbox-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 auto;
+
+                    label {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            text-align: center;
+
+            margin-top: 10px;
+
+            button {
+                width: 148px;
+                height: 48px;
+            }
+        }
+    }
+}
+
+@media (min-height: 680px) {
+    #page-toppings {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

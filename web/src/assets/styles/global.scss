@@ -1,0 +1,38 @@
+:root {
+    --color-background: #f0f0f7;
+    --color-background-base: #6d6d6d;
+    --color-text-base: #6a6180;
+    --color-checkbox: #e6e6f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+html,
+body,
+#root {
+    height: 100vh;
+}
+
+body {
+    background-color: var(--color-background-base);
+    background-image: url("https://images.unsplash.com/photo-1585238342024-78d387f4a707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+input,
+button {
+    font: 500 16px Poppins;
+    color: var(--color-text-base);
+}
