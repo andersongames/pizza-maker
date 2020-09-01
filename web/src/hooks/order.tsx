@@ -91,7 +91,7 @@ function useOrder() {
         maxToppings = 7;
         break;
       case 'large':
-        maxToppings = 10;
+        maxToppings = 9;
         break;
     }
 
