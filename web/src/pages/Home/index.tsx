@@ -9,7 +9,7 @@ import './styles.scss';
 
 function Home() {
 
-  const { size, price, prices, handleSize, handlePrice } = useOrder();
+  const { size, price, prices, maxNumberOfToppings, handleSize, handlePrice } = useOrder();
   const [currentPrice, setCurrentPrice] = useState(price); //about price: totalPrice will only be updated when user go to next page, in current page the user will see this variable as price
 
   handlePrice(0); //reset the price when come back to home page
@@ -21,14 +21,18 @@ function Home() {
       setCurrentPrice(price);
 
     setCurrentPrice(price + prices.size[size]);
-    //console.log(size, price)
+    console.log(size, price, maxNumberOfToppings)
+  }
+
+  function log() {
+    console.log(maxNumberOfToppings);
   }
 
   return (
     <div id="page-home">
       <Header />
 
-      <h3>Pick the size:</h3>
+      <h3 onClick={() => log()}>Pick the size:</h3>
 
       <div className="size-buttons">
         <div className="size-button-wrapper">

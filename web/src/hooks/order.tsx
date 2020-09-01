@@ -83,10 +83,17 @@ function useOrder() {
     currentSize = size;
     setSize(currentSize);
 
-    if (size === 'medium')
-      maxToppings = 7;
-    else if (size === 'large')
-      maxToppings = 9;
+    switch (size) {
+      case 'small':
+        maxToppings = 5;
+        break;
+      case 'medium':
+        maxToppings = 7;
+        break;
+      case 'large':
+        maxToppings = 10;
+        break;
+    }
 
     setMaxNumberOfToppings(maxToppings);
   }
