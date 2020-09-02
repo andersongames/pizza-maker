@@ -1,6 +1,7 @@
-//componente with the icons
+//component with the icons
 
 import React from 'react';
+
 import { Topping } from '../../hooks/order';
 
 import { ReactComponent as Pepperoni } from '../../assets/toppingsIcons/pepperoni.svg';

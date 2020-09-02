@@ -1,18 +1,12 @@
+@import '../../assets/styles/resources.scss';
+
 #page-toppings {
     display: flex;
     padding-top: 60%;
     padding-bottom: 4%;
 
     .toppings-content {
-        max-width: 660px;
-        width: 90vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: center;
-        background-color: var(--color-background);
-        border-radius: 16px;
-        padding: 2%;
+        @include page-content;
 
         p {
             padding: 8px 0 8px 0;
@@ -61,17 +55,8 @@
         }
 
         .nav-buttons {
-            display: flex;
-            align-items: center;
+            @include nav-buttons;
             justify-content: space-evenly;
-            text-align: center;
-
-            margin-top: 10px;
-
-            button {
-                width: 148px;
-                height: 48px;
-            }
         }
     }
 }

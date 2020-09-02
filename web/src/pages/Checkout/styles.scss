@@ -1,37 +1,18 @@
+@import '../../assets/styles/resources.scss';
+
 #page-checkout {
     display: flex;
 
     .checkout-content {
-        max-width: 660px;
-        width: 90vw;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: center;
-
-        background-color: var(--color-background);
-
-        border-radius: 16px;
-
-        padding: 2%;
+        @include page-content;
 
         h3 {
             margin-top: 12px;
         }
 
         .nav-buttons {
-            display: flex;
-            align-items: center;
+            @include nav-buttons;
             justify-content: space-evenly;
-            text-align: center;
-
-            margin-top: 10px;
-
-            button {
-                width: 148px;
-                height: 48px;
-            }
         }
     }
 }

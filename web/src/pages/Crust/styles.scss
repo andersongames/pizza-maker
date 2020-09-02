@@ -1,15 +1,7 @@
+@import '../../assets/styles/resources.scss';
+
 #crust-content {
-    max-width: 660px;
-    width: 90vw;
-    max-height: 360px;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    background-color: var(--color-background);
-    border-radius: 16px;
-    padding: 2%;
+    @include page-content;
 
     .crust-buttons {
         display: flex;
@@ -28,16 +20,7 @@
     }
 
     .nav-buttons {
-        display: flex;
-        align-items: center;
+        @include nav-buttons;
         justify-content: space-evenly;
-        text-align: center;
-
-        margin-top: 10px;
-
-        button {
-            width: 148px;
-            height: 48px;
-        }
     }
 }
